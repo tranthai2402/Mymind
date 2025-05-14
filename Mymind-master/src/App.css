@@ -1,0 +1,56 @@
+
+.main-topbar-buffer {
+  margin-top: 64px !important; /* Đảm bảo nội dung không bị che khuất */
+  pointer-events: auto; /* Chỉ nhận sự kiện chuột dưới thanh bar */
+}
+
+/* Đảm bảo root container không ảnh hưởng đến sự kiện chuột */
+#root, body, html {
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.main-grid-item {
+  padding: 20px;
+  margin: 10px;
+}
+
+.main-topbar-buffer {
+  margin-top: 68px; 
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.MuiListItem-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+.MuiListItem-root.Mui-selected {
+  background-color: rgba(25, 118, 210, 0.08);
+}

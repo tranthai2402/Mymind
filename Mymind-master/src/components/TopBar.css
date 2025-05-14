@@ -1,0 +1,56 @@
+
+.topbar {
+    background-color: #000000 !important;
+    color: #ffffff;
+    width: 100vw !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    margin-top: 0;
+    pointer-events: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.topbar .MuiToolbar-root {
+  padding: 0;
+  width: 100% !important;
+}
+
+.topbar-title {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0 16px;
+    text-decoration: none;
+}
+
+.topbar-button {
+    color: #ffffff !important;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.topbar-button:hover {
+    background-color: rgb(255, 255, 254);
+    color: #000000 !important;
+}
+
+.topbar-username {
+  color: #ffffff;
+  margin: 0 12px;
+}
+
+.toolbar-container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toolbar-container .topbar-button:last-child {
+    margin-right: 30px;
+    padding-right: 8px;
+}
