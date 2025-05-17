@@ -1,0 +1,50 @@
+.post-form-paper {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.post-form-title {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.post-form {
+  width: 100%;
+}
+
+.content-field textarea {
+  min-height: 100px;
+}
+
+.image-preview-container {
+  position: relative;
+  margin: 16px 0;
+  display: inline-block;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.remove-image-button {
+  position: absolute !important;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-actions {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.upload-button {
+  margin-right: 16px !important;
+}
+
+.cancel-button {
+  margin-right: 8px !important;
+}

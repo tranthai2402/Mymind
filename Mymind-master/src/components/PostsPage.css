@@ -1,0 +1,38 @@
+.posts-container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.posts-list {
+  margin-top: 24px;
+}
+
+.no-posts {
+  text-align: center;
+  margin: 40px 0;
+  color: #666;
+}
+
+.mobile-add-button {
+  position: fixed !important;
+  bottom: 24px;
+  right: 24px;
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .desktop-add-button {
+    display: none;
+  }
+  
+  .mobile-add-button {
+    display: flex !important;
+  }
+}

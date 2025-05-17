@@ -4,35 +4,30 @@ import {
   Avatar, CircularProgress, Typography 
 } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
+import { fetchUsers } from '../services/api';
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
   const { userId } = useParams();
 
   useEffect(() => {
-    // Giả lập việc tải danh sách người dùng từ API
-    const fetchUsers = async () => {
+    const loadUsers = async () => {
       try {
-        // Giả lập gọi API
-        setTimeout(() => {
-          const mockUsers = [
-            { id: 1, name: 'John Doe', email: 'john@example.com', avatar: 'https://via.placeholder.com/50' },
-            { id: 2, name: 'Jane Smith', email: 'jane@example.com', avatar: 'https://via.placeholder.com/50' },
-            { id: 3, name: 'Bob Johnson', email: 'bob@example.com', avatar: 'https://via.placeholder.com/50' },
-            { id: 4, name: 'Alice Brown', email: 'alice@example.com', avatar: 'https://via.placeholder.com/50' },
-          ];
-          setUsers(mockUsers);
-          setLoading(false);
-        }, 1000);
-      } catch (error) {
-        console.error('Error fetching users:', error);
+        setLoading(true);
+        const data = await fetchUsers();
+        setUsers(data);
+      } catch (err) {
+        setError('Failed to load users');
+        console.error(err);
+      } finally {
         setLoading(false);
       }
     };
-
-    fetchUsers();
+    
+    loadUsers();
   }, []);
 
   const handleUserClick = (userId) => {
@@ -45,6 +40,10 @@ const UserList = () => {
         <CircularProgress />
       </div>
     );
+  }
+
+  if (error) {
+    return <div>{error}</div>;
   }
 
   return (

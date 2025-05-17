@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { Add as AddIcon } from '@mui/icons-material';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import './TopBar.css';
@@ -15,7 +16,6 @@ const TopBar = () => {
 
   return (
     <AppBar position="fixed" className="topbar">
-    
       <Toolbar className="toolbar-container">
         <Typography 
           variant="h6" 
@@ -36,6 +36,25 @@ const TopBar = () => {
                 className="topbar-button"
               >
                 Users
+              </Button>
+              
+              <Button 
+                color="inherit" 
+                component={Link} 
+                to="/posts" 
+                className="topbar-button"
+              >
+                Posts
+              </Button>
+              
+              <Button 
+                color="inherit" 
+                component={Link} 
+                to="/posts/new" 
+                className="topbar-button"
+                startIcon={<AddIcon />}
+              >
+                Add Post
               </Button>
               
               <Button

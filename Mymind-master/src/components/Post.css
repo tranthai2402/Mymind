@@ -1,0 +1,60 @@
+.post-card {
+  margin-bottom: 20px;
+}
+
+.post-image {
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.post-actions {
+  padding: 8px 16px;
+}
+
+.reactions-summary {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  color: #666;
+}
+
+.reaction-icons {
+  display: flex;
+  margin-right: 8px;
+}
+
+.reaction-icons svg {
+  margin-right: -4px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 2px;
+}
+
+.comments-section {
+  padding: 0 16px 16px;
+}
+
+.comments-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.add-comment {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.comment-avatar {
+  margin-right: 8px;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.reaction-menu .MuiMenuItem-root {
+  min-width: 120px;
+}
+
+.reaction-menu .MuiMenuItem-root svg {
+  margin-right: 8px;
+}
